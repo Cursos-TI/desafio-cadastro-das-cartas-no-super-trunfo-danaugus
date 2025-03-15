@@ -11,6 +11,11 @@ int main() {
     float pib1 =1, pib2 = 1;
     int turpt1 =1, turpt2 = 1;
 
+    //adicionado nível aventureiro
+    float denpop1 = 1, denpop2 = 1;
+    float pibcapita1 = 1, pibcapita2 = 1;
+
+
     //Criando a Carta1
     printf("*****Insira os dados da Carta 1*****\n");
     printf("Digite uma letra de A a H, representando o Estado 1: \n");
@@ -30,6 +35,11 @@ int main() {
     printf("Digite quantos pontos turísticos a Carta 1 possui: \n");
     scanf("%d", &turpt1);    
 
+    //adicionado nível aventureiro
+    denpop1 = (float) populacao1 / area1;
+    pibcapita1 = (float) (pib1 * 1000000000) / populacao1;
+    
+    
     //Criando a Carta2
     printf("\n*****Insira agora os dados da Carta 2*****\n");
     printf("Digite uma letra de A a H, representando o Estado 2: \n");
@@ -49,6 +59,10 @@ int main() {
     printf("Digite quantos pontos turísticos a Carta 2 possui: \n");
     scanf("%d", &turpt2);
 
+    //adicionado nível aventureiro
+    denpop2 = (float) populacao2 / area2;
+    pibcapita2 = (float) (pib2 * 1000000000) / populacao2;
+    
     //Exibir Carta 1
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado1);
@@ -59,6 +73,9 @@ int main() {
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", turpt1);
 
+    //adicionado nível aventureiro
+    printf("Densidade Populacional: %.2f hab/km²\n", denpop1);
+    printf("PIB per Capita: %.2f reais\n", pibcapita1);
 
     //Exibir Carta 2 
     printf("\nCarta 2:\n");
@@ -69,6 +86,10 @@ int main() {
     printf("Área: %.2f Km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", turpt2);
+
+    //adicionado nível aventureiro
+    printf("Densidade Populacional: %.2f hab/km²\n", denpop2);
+    printf("PIB per Capita: %.2f reais\n", pibcapita2);
 
     return 0;
 
